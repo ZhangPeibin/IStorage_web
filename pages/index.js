@@ -2,15 +2,7 @@
 import { jsx, css } from "@emotion/react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect,useState} from "react";
-import WebsitePrototypeWrapper from "../components/core/WebsitePrototypeWrapper";
-import * as Constants from "/common/constants";
-import {ButtonPrimary} from "../components/widget/Buttons";
-import WebsitePrototypeHeader from "../components/core/WebsitePrototypeHeader";
 import { useRouter } from 'next/router';
-import WebHead from '../components/core/WebHead';
-import IndexBg from "../components/widget/Indexbg";
-import Landing from "./Landing";
-import Footer from "../components/core/Footer";
 
 const STYLE_HEAD = css`
   width: 100%;
