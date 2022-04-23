@@ -10,6 +10,8 @@ const STYLE_HEAD = css`
   background: #151A2F;
   line-height:62px;
 `;
+
+
 const HEAD_LI = css`
   width: 119px;
   height: 62px;
@@ -166,6 +168,7 @@ const CONTENT2_CON = css`
 const CONTENT2_SIXBOX = css`
   width:1200px;
   margin:0 auto;
+  margin-top: 40px;
 `
 
 const FIRSTSIX = css``
@@ -211,6 +214,7 @@ const CONTENT3_TIT = css`
   color: #FFFFFF;
   line-height: 67px;
   margin-top:100px;
+  margin-bottom: 50px;
 `
 const CONTENT3_CONBOX = css`
   width:1200px;
@@ -254,6 +258,7 @@ const STYLE_BOTTOM = css`
 `
 const FOOTER_IMG = css`
   width:100%;
+  height:100%;
 `
 const FOOTER_CON = css`
   position: absolute;
@@ -340,7 +345,7 @@ function IndexPage() {
     <div style={{ width: '100%' }}>
         <div css={STYLE_HEAD}>
           <div style={{ width: '1200px',margin:"auto", }}>
-            <span style={{ fontSize: "24px", color: "#fff", width: "150px" }}>LOGOGOO</span>  
+          <img style={{ width: "150px", height: "42px", marginTop: "5px", display:"inline-block"}} src="../static/logo.png" alt="" />
             <ul style={{  display: "inline-block", marginLeft:"400px"}}>
               <li css={HEAD_LI}>注册</li>
               <li css={HEAD_LI}>领券中心</li>
@@ -357,7 +362,7 @@ function IndexPage() {
       <div css={STYLE_BODY}>
         <div css={STYLE_CONTENT}>
           <div css={CONTENT_HEAD}>
-            <ul css={CONTENT_UL}>
+            <ul css={CONTENT_UL} style={{ marginLeft:"0",paddingLeft:"0"}}>
               <li css={CONTENT_LI}>
                 <p css={LI_TITLE}>DATA ACCOUNTS</p>
                 <p css={LI_CON}>S73.36 B</p>
