@@ -21,7 +21,7 @@ const HEAD_LI = css`
   color: #fff;
 `;
 const STYLE_signin = css`
-  font-size: 13px;
+  font-size: 14px;
   line-height: 40px;
   height: 40px;
   padding-left: 16px;
