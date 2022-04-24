@@ -77,7 +77,7 @@ const STYLE_CONTENT = css`
 
 const CONTENT_HEAD = css`
   width: 1200px;
-  height: 152px;
+  height: 140px;
   background: #373F67;
   border: 1px solid #373F67;
   border-radius: 4px 4px 8px 8px;
@@ -99,15 +99,15 @@ const CONTENT_LI = css`
 `;
 
 const LI_TITLE = css`
-  font-size: 16px;
-  font-family: D-DIN;
   font-weight: bold;
   color: #FFFFFF;
 `;
 const LI_CON = css`
   font-size: 44px;
-  font-family: D-DIN;
+  line-height: 1.8rem;
   font-weight: bold;
+  padding: 0;
+  margin: 0;
   color: #8875FF;
 `;
 
@@ -385,26 +385,26 @@ function IndexPage() {
                     <div css={CONTENT_HEAD}>
                         <ul css={CONTENT_UL} style={{marginLeft: "0", paddingLeft: "0"}}>
                             <li css={CONTENT_LI}>
-                                <p css={LI_TITLE}>DATA ACCOUNTS</p>
-                                <p css={LI_CON}>S73.36 B</p>
+                                <h3 css={LI_TITLE}>Total Data</h3>
+                                <p css={LI_CON}>1352</p>
                             </li>
                             <li css={CONTENT_LI}>
-                                <p css={LI_TITLE}>USER</p>
-                                <p css={LI_CON}>S73.36 B</p>
+                                <h3 css={LI_TITLE}>Total Volume</h3>
+                                <p css={LI_CON}> 73.36 </p>
                             </li>
                             <li css={CONTENT_LI}>
-                                <p css={LI_TITLE}>NFTS</p>
-                                <p css={LI_CON}>S73.36 B</p>
+                                <h3 css={LI_TITLE}>Users</h3>
+                                <p css={LI_CON}>38</p>
                             </li>
                             <li css={CONTENT_LI}>
-                                <p css={LI_TITLE}>VOLUME</p>
-                                <p css={LI_CON}>S73.36 B</p>
+                                <h3 css={LI_TITLE}>NFTS</h3>
+                                <p css={LI_CON}>456</p>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div css={STYLE_CONTENT1}>
-                    <p css={CONTENT1_TIT}>WHY MULTICHAIN</p>
+                    <p css={CONTENT1_TIT}>Why IStorage</p>
                     <div css={CONTENT1_CONBOX}>
                         <dl css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
