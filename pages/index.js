@@ -13,23 +13,23 @@ const STYLE_HEAD = css`
 
 
 const HEAD_LI = css`
-  width: 119px;
   height: 62px;
+  margin-right: 16px;
   text-align: center;
   display: inline-block;
   font-size: 20px;
   color: #fff;
 `;
 const STYLE_signin = css`
-  display: inline-block;
-  width: 119px;
-  height: 54px;
-  font-size: 24px;
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-align: center;
+  margin-left: 8px;
   background: linear-gradient(-90deg, #5352FC 0%, #6BA2FF 100%);
   color: #fff;
-  float: right;
-
   :hover {
     margin-top: 4px;
   }
@@ -64,7 +64,7 @@ const BANNER_BTN = css`
   line-height: 52px;
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 50%;
   transform: translate(-50%)
 `;
 
@@ -356,23 +356,27 @@ function IndexPage() {
         <div style={{width: '100%'}}>
             <div css={STYLE_HEAD}>
                 <div style={{width: '1200px', margin: "auto",}}>
-                    <img style={{width: "150px", height: "42px", marginTop: "5px", display: "inline-block"}}
-                         src="../static/logo.png" alt=""/>
-                    <ul style={{display: "inline-block", marginLeft: "400px"}}>
-                        <li css={HEAD_LI}>注册</li>
-                        <li css={HEAD_LI}>领券中心</li>
-                        <li css={HEAD_LI}>关注我们</li>
-                        <li css={HEAD_LI}>控制台</li>
-                    </ul>
-                    <span css={STYLE_signin} onClick={_signIn}>SIGN IN</span>
+                    <nav className="navbar navbar-expand-xl"  >
+                        <img style={{width: "150px", height: "42px", marginTop: "5px", display: "inline-block"}}
+                             src="../static/logo.png" alt=""/>
+                        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                            <div className="navbar-nav">
+                                <a  onClick={()=>{ }} className="nav-link" href="#home">Home</a>
+                                <a  onClick={()=>{ }} className="nav-link" href="#home">What is W3DS</a>
+                                <a onClick={()=>{ }}  className="nav-link" href="#roadmap">Roadmap</a>
+                                <a onClick={()=>{ }}  className="nav-link" href="#faq">Faq</a>
+                                <a onClick={()=>{ }} className="nav-link" href="#contact">Contact</a>
+                            </div>
+                        </div>
+                        <div css={STYLE_signin} onClick={_signIn}>Launch App</div>
+                    </nav>
                 </div>
             </div>
             <div css={STYLE_BANNER}>
                 <img src="/static/banner.png" style={{ width: "100%" }} alt="" />
-                <p css={ BANNER_TXT }>NEXTSTORAGE IS A DECENTRALIZED STORAGE AGGRE- <br />
-                    GATION LAYER DESIGNED TO ESTABLISH A DATA <br />
-                    METAVERSE</p>
-                <div css={BANNER_BTN} onClick={_whitePager}>WHITEPAGER</div>
+                <p css={ BANNER_TXT }>Build  Decentralized Storage Aggregation Layer<br />
+                    Designed to establish a Data Metaverse </p>
+                <div css={BANNER_BTN} onClick={_whitePager}>White Pager</div>
             </div>
             <div css={STYLE_BODY}>
                 <div css={STYLE_CONTENT}>
