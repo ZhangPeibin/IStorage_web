@@ -42,6 +42,18 @@ const STYLE_BANNER = css`
   width: 100%;
   position: relative;
 `;
+const BANNER_TXT = css`
+  width:100%;
+  text-align: center;
+  color:#fff;
+  font-size:40px;
+  text-align:center;
+  line-height:70px;
+  position: absolute;
+  left:50%;
+  top:20%;
+  transform: translate(-50%)
+`
 const BANNER_BTN = css`
   width: 163px;
   height: 52px;
@@ -356,7 +368,10 @@ function IndexPage() {
                 </div>
             </div>
             <div css={STYLE_BANNER}>
-                <img src="/static/banner.png" style={{width: "100%"}} alt=""/>
+                <img src="/static/banner.png" style={{ width: "100%" }} alt="" />
+                <p css={ BANNER_TXT }>NEXTSTORAGE IS A DECENTRALIZED STORAGE AGGRE- <br />
+                    GATION LAYER DESIGNED TO ESTABLISH A DATA <br />
+                    METAVERSE</p>
                 <div css={BANNER_BTN} onClick={_whitePager}>WHITEPAGER</div>
             </div>
             <div css={STYLE_BODY}>
