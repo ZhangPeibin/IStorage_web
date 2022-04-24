@@ -47,7 +47,7 @@ const BANNER_TXT = css`
   text-align: center;
   color:#fff;
   font-weight: bold;
-  font-size:40px;
+  font-size:44px;
   text-align:center;
   line-height:70px;
   position: absolute;
@@ -375,8 +375,9 @@ function IndexPage() {
             </div>
             <div css={STYLE_BANNER}>
                 <img src="/static/banner.png" style={{ width: "100%" }} alt="" />
-                <p css={ BANNER_TXT }>Build  Decentralized Storage Aggregation Layer<br />
-                    Designed to establish a Data Metaverse </p>
+                <p css={ BANNER_TXT }>Build  Decentralized Storage Aggregation Layer
+                     </p>
+                <p css={ BANNER_TXT } style={{marginTop:56}}>Designed to establish a Data Metaverse</p>
                 <div css={BANNER_BTN} onClick={_whitePager}>White Pager</div>
             </div>
             <div css={STYLE_BODY}>
