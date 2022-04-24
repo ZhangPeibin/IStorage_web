@@ -101,10 +101,11 @@ const CONTENT_LI = css`
 const LI_TITLE = css`
   font-weight: bold;
   color: #FFFFFF;
+  margin-top: 4px;
 `;
 const LI_CON = css`
   font-size: 44px;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
   font-weight: bold;
   padding: 0;
   margin: 0;
