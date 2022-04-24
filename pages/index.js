@@ -46,6 +46,7 @@ const BANNER_TXT = css`
   width:100%;
   text-align: center;
   color:#fff;
+  font-weight: bold;
   font-size:40px;
   text-align:center;
   line-height:70px;
