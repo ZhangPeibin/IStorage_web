@@ -209,6 +209,7 @@ const SIXIMG = css`
 `
 
 const SIXTEXT = css`
+  font-size: 18px;
   padding: 100px 25px;
   color: #fff;
   position: absolute;
@@ -437,50 +438,43 @@ function IndexPage() {
                     </div>
                 </div>
                 <div css={STYLE_CONTENT2}>
-                    <p css={CONTENT2_TIT}>STATUS OF <span
-                        style={{color: "#8774FD"}}>TORNADO CASH</span> DECENTRALIZATION</p>
-                    <p css={CONTENT2_CON}><span style={{color: "#8774FD"}}>TORNADO CASH</span> PROTOCOL IS FULLY
-                        DECENTRALIZED AND OWNED BY THE COMMUNITY: TORNADO CASH INITIAL</p>
-                    <p css={CONTENT2_CON}>DEVELOPERS HAVE NO CONTROL OVER IT AND ARE NOT RUNNING ANY SERVERS</p>
+                    <p css={CONTENT2_TIT}>Keys of <span
+                        style={{color: "#8774FD"}}>IStorage</span></p>
+                    <p css={CONTENT2_CON}><span style={{color: "#8774FD"}}>IStorage</span> is fully
+                        decentralized and will be owned by Data DAO </p>
+                    <p css={CONTENT2_CON}>Devs cannot control anyone's data and trace data back to individuals,All is Decentralized</p>
                     {/* 六边形图 */}
                     <div css={CONTENT2_SIXBOX}>
                         <div css={FIRSTSIX}>
                             <div css={SIXCON} style={{marginLeft: "20px"}}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>Authorize signing with web3 wallet and produce identity via Ed25519</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>Link DID through Identity and build user's web3 social portrait with DID</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>All data is stored in decentralized storage for free, whether public or private</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain configuration</p>
                             </div>
                         </div>
                         <div css={SECONDSIX}>
                             <div css={SIXCON} style={{marginLeft: "20px"}}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized server</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>Multi-chain marketplace allows users to choose the mode of bid => data test => final trade</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>TORNADO CASH SMART CONTRACTS, CIRCUITS, AND TOOLCHAIN ARE FULLY OPEN
-                                    SOURCED.</p>
+                                <p css={SIXTEXT}>All data will not be obtained from the data source until the final transaction</p>
                             </div>
                         </div>
                     </div>
