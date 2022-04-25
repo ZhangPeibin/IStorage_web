@@ -147,18 +147,18 @@ const ALITBOX = css`
   display: inline-block;
 `
 const ALITBOX_CON1 = css`
-  font-size: 20px;
-  font-family: D-DIN;
   font-weight: bold;
+  font-family: Manrope-ExtraBold;
+  font-size: 1.375rem;
+  text-align: center;
   color: #FFFFFF;
   line-height: 50px;
 `
 const ALITBOX_CON2 = css`
-  font-size: 14px;
-  font-family: PingFang SC;
-  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
   color: #FFFFFF;
-  line-height: 30px;
+  font-family: Manrope-Regular;
 `
 const STYLE_CONTENT2 = css`
   width: 100%;
@@ -410,31 +410,28 @@ function IndexPage() {
                         <dl css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
                             <dd>
-                                <p css={ALITBOX_CON1}>NON-CUSTODIAL + MPC</p>
+                                <p css={ALITBOX_CON1}>Decentralized Identity</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>MPC, THE POWERFUL SYMBOL OF DECENTRALIZATION, PROCESSES MULTICHAIN
-                                    CROSS-CHAIN BRIDGING AND SMART CONTRACT METHODS ON OTHER CHAINS.</p>
+                                <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases personal privacy and autonomous control of data</p>
                             </dt>
                         </dl>
                         <dl css={ALITBOX} style={{margin: " 0 63px"}}>
                             <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
                             <dd>
-                                <p css={ALITBOX_CON1}>NO-SLIPPAGE SWAP</p>
+                                <p css={ALITBOX_CON1}>Cross-Chain storage</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>MPC, THE POWERFUL SYMBOL OF DECENTRALIZATION, PROCESSES MULTICHAIN
-                                    CROSS-CHAIN BRIDGING AND SMART CONTRACT METHODS ON OTHER CHAINS.</p>
+                                <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data cross-chain and aggregation interaction capabilities</p>
                             </dt>
                         </dl>
                         <dl css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li2.png" alt=""/>
                             <dd>
-                                <p css={ALITBOX_CON1}>NON-CUSTODIAL + MPC</p>
+                                <p css={ALITBOX_CON1}>Multi-Chain market</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>MPC, THE POWERFUL SYMBOL OF DECENTRALIZATION, PROCESSES MULTICHAIN
-                                    CROSS-CHAIN BRIDGING AND SMART CONTRACT METHODS ON OTHER CHAINS.</p>
+                                <p css={ALITBOX_CON2}>IStorage market provides multi-chain based data transaction functions. It allows data transactions on different chains</p>
                             </dt>
                         </dl>
                     </div>
