@@ -177,6 +177,13 @@ const CONTENT2_TIT = css`
   color: #FFFFFF;
   padding-top: 100px;
 `
+
+const CONTENT2_TIT_contact = css`
+  font-size: 52px;
+  font-family: D-DIN;
+  font-weight: bold;
+  color: #FFFFFF;
+`
 const CONTENT2_CON = css`
   font-size: 18px;
   font-weight: 500;
@@ -184,6 +191,12 @@ const CONTENT2_CON = css`
   padding: 0;
   margin: 0;
 `
+const CONTENT2_CON_CONTACT = css`
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+`
+
 const CONTENT2_CON_SUB = css`
   font-size: 18px;
   font-weight: 500;
@@ -547,29 +560,18 @@ function IndexPage() {
                         </div>
                     </div>
                 </div>
-                <section className='faq container' id="faq">
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='text-center'>
-                                <h2>FAQ</h2>
-                                <div className="small-border"></div>
-                            </div>
-                            <Faq data={data}/>
-                        </div>
-                    </div>
-                </section>
 
-                <section className='contact container-fluid bg-gray ' id="contact">
+                <section  style={{  background: "#2B314F"}}  className='contact container-fluid bg-gray ' id="contact">
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='text-center'>
-                                <h2>Contact us</h2>
+                                <p css={CONTENT2_TIT_contact}>Contact us</p>
                                 <div className="small-border"></div>
                                 <footer className="footer bg__gradient">
                                     <div className="footer__wrapper padding-top padding-bottom">
                                         <div className="container">
                                             <div className="footer__content text-center">
-                                                <p>We are glad that you can contact us</p>
+                                                <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact us</p>
                                                 <ul className="social justify-content-center">
                                                     <li className="social__item">
                                                         <a href="https://twitter.com/IPFSpace" target={'_blank'} className="social__link"><i className="fab fa-twitter"></i></a>
