@@ -315,26 +315,27 @@ const FOOTER_CON = css`
 const FOOTER_CONLEFT = css`
   width: 400px;
   height: 100%;
-  padding: 80px 0;
   margin-right: 20px;
+  margin-top: 120px;
 `
 const FOOTER_CONRIGHT = css`
   width: 780px;
   height: 100%;
-  padding: 100px 0;
+  padding: 80px 0;
+  margin-left: 172px ;
 `
 const CONLEFT_P1 = css`
   font-size: 46px;
   font-weight: bold;
   color: #FFFFFF;
-  line-height: 65px;
+  line-height: 70px;
 `
 
 const CONLEFT_P2 = css`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: #FFFFFF;
-  line-height: 34px;
+  line-height: 38px;
 `
 const CONLEFT_BTN = css`
   width: 360px;
@@ -547,9 +548,8 @@ function IndexPage() {
                                 different chains have their own advantages.
                                 After you store data on different storage chains, you need to operate your data on
                                 different chain platforms. This is complicated and not suitable for unified
-                                operation<br/><span></span><br/>With IStorage you can store and modify data on different
-                                storage chains, as well as switch storage platforms for data. </p>
-                            <img src="/static/con3left.png" style={{width: "100%"}} alt=""/>
+                                operation<br/><span></span><br/>With IStorage you can store and modify data on different storage chains, as well as switch storage platforms for data. </p>
+                <img src="/static/con3left.png" style={{ width: "100%", marginTop:"100px"}} alt=""/>
                         </div>
                         <div css={CONBOX_LEFT}>
                             <p css={LEFT_1}>CROSS-CHAIN</p>
@@ -650,19 +650,15 @@ function IndexPage() {
                                         <div className="container">
                                             <div className="footer__content text-center">
                                                 <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact us</p>
-                                                <ul className="social justify-content-center">
+                                                <ul className="social justify-content-center"  style={{ marginTop:"40px"}}>
                                                     <li className="social__item">
-                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'}
-                                                           className="social__link"><i
-                                                            className="fab fa-twitter"></i></a>
+                                                      <a href="https://twitter.com/IPFSpace" target={'_blank'} style={{ color:"#fff"}} className="social__link"><i className="fab fa-twitter"></i></a>
                                                     </li>
                                                     <li className="social__item">
-                                                        <a href="#" className="social__link" target={'_blank'}><i
-                                                            className="fab fa-discord"></i></a>
+                                                        <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>
                                                     </li>
                                                     <li className="social__item">
-                                                        <a href="https://t.me/peibin" className="social__link"
-                                                           target={'_blank'}><i className="fab fa-twitch"></i></a>
+                                                        <a href="https://t.me/peibin" className="social__link" style={{ color:"#fff"}} target={'_blank'}><i className="fab fa-twitch"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
