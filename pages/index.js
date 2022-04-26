@@ -428,7 +428,7 @@ function IndexPage() {
                         <dl css={ALITBOX} style={{margin: " 0 63px"}}>
                             <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
                             <dd>
-                                <p css={ALITBOX_CON1}>Cross-Chain storage</p>
+                                <p css={ALITBOX_CON1}>Multi-Chain storage</p>
                             </dd>
                             <dt>
                                 <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data cross-chain and aggregation interaction capabilities</p>
@@ -437,10 +437,10 @@ function IndexPage() {
                         <dl css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li2.png" alt=""/>
                             <dd>
-                                <p css={ALITBOX_CON1}>Multi-Chain market</p>
+                                <p css={ALITBOX_CON1}>Cross-Chain market</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>IStorage market provides multi-chain based data transaction functions. It allows data transactions on different chains</p>
+                                <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It allows data transactions on different chains</p>
                             </dt>
                         </dl>
                     </div>
