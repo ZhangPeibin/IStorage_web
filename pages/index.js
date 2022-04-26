@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/react";
+import {jsx, css} from "@emotion/react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
 import Faq from 'react-faq-component';
-
 
 
 const STYLE_HEAD = css`
@@ -33,6 +32,7 @@ const STYLE_signin = css`
   margin-left: 8px;
   background: linear-gradient(-90deg, #5352FC 0%, #6BA2FF 100%);
   color: #fff;
+
   :hover {
     margin-top: 4px;
   }
@@ -46,16 +46,16 @@ const STYLE_BANNER = css`
   position: relative;
 `;
 const BANNER_TXT = css`
-  width:100%;
+  width: 100%;
   text-align: center;
-  color:#fff;
+  color: #fff;
   font-weight: bold;
-  font-size:44px;
-  text-align:center;
-  line-height:70px;
+  font-size: 44px;
+  text-align: center;
+  line-height: 70px;
   position: absolute;
-  left:50%;
-  top:20%;
+  left: 50%;
+  top: 20%;
   transform: translate(-50%)
 `
 const BANNER_BTN = css`
@@ -120,7 +120,7 @@ const STYLE_CONTENT1 = css`
   height: 830px;
   background: #21263e;
   overflow: hidden;
-  
+
   font-family: D-DIN;
   font-weight: bold;
   color: #FFFFFF;
@@ -399,16 +399,21 @@ function IndexPage() {
         <div style={{width: '100%'}}>
             <div css={STYLE_HEAD}>
                 <div style={{width: '1200px', margin: "auto",}}>
-                    <nav className="navbar navbar-expand-xl"  >
+                    <nav className="navbar navbar-expand-xl">
                         <img style={{width: "150px", height: "42px", marginTop: "5px", display: "inline-block"}}
                              src="../static/logo.png" alt=""/>
                         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
-                                <a  onClick={()=>{ }} className="nav-link" href="#home">Home</a>
-                                <a  onClick={()=>{ }} className="nav-link" href="#home">What is W3DS</a>
-                                <a onClick={()=>{ }}  className="nav-link" href="#roadmap">Roadmap</a>
-                                <a onClick={()=>{ }}  className="nav-link" href="#faq">Faq</a>
-                                <a onClick={()=>{ }} className="nav-link" href="#contact">Contact</a>
+                                <a onClick={() => {
+                                }} className="nav-link" href="#home">Home</a>
+                                <a onClick={() => {
+                                }} className="nav-link" href="#home">What is W3DS</a>
+                                <a onClick={() => {
+                                }} className="nav-link" href="#roadmap">Roadmap</a>
+                                <a onClick={() => {
+                                }} className="nav-link" href="#faq">Faq</a>
+                                <a onClick={() => {
+                                }} className="nav-link" href="#contact">Contact</a>
                             </div>
                         </div>
                         <div css={STYLE_signin} onClick={_signIn}>Launch App</div>
@@ -416,10 +421,10 @@ function IndexPage() {
                 </div>
             </div>
             <div css={STYLE_BANNER}>
-                <img src="/static/banner.png" style={{ width: "100%" }} alt="" />
-                <p css={ BANNER_TXT }>Build  Decentralized Storage Aggregation Layer
-                     </p>
-                <p css={ BANNER_TXT } style={{marginTop:56}}>Designed to establish a Data Metaverse</p>
+                <img src="/static/banner.png" style={{width: "100%"}} alt=""/>
+                <p css={BANNER_TXT}>Build Decentralized Storage Aggregation Layer
+                </p>
+                <p css={BANNER_TXT} style={{marginTop: 56}}>Designed to establish a Data Metaverse</p>
                 <div css={BANNER_BTN} onClick={_whitePager}>White Pager</div>
             </div>
             <div css={STYLE_BODY}>
@@ -454,7 +459,8 @@ function IndexPage() {
                                 <p css={ALITBOX_CON1}>Decentralized Identity</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases personal privacy and autonomous control of data</p>
+                                <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases
+                                    personal privacy and autonomous control of data</p>
                             </dt>
                         </dl>
                         <dl css={ALITBOX} style={{margin: " 0 63px"}}>
@@ -463,7 +469,8 @@ function IndexPage() {
                                 <p css={ALITBOX_CON1}>Multi-Chain storage</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data cross-chain and aggregation interaction capabilities</p>
+                                <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data
+                                    cross-chain and aggregation interaction capabilities</p>
                             </dt>
                         </dl>
                         <dl css={ALITBOX}>
@@ -472,7 +479,8 @@ function IndexPage() {
                                 <p css={ALITBOX_CON1}>Cross-Chain market</p>
                             </dd>
                             <dt>
-                                <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It allows data transactions on different chains</p>
+                                <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It
+                                    allows data transactions on different chains</p>
                             </dt>
                         </dl>
                     </div>
@@ -484,7 +492,8 @@ function IndexPage() {
                         <span style={{color: "#8774FD"}}>IStorage</span> is fully
                         decentralized and will be owned by Data DAO
                     </p>
-                    <p css={CONTENT2_CON_SUB}>Devs cannot control anyone's data and trace data back to individuals,All is Decentralized</p>
+                    <p css={CONTENT2_CON_SUB}>Devs cannot control anyone's data and trace data back to individuals,All
+                        is Decentralized</p>
                     {/* 六边形图 */}
                     <div css={CONTENT2_SIXBOX}>
                         <div css={FIRSTSIX}>
@@ -494,35 +503,41 @@ function IndexPage() {
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Link DID through Identity and build user's web3 social portrait with DID</p>
+                                <p css={SIXTEXT}>Link DID through Identity and build user's web3 social portrait with
+                                    DID</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>All data is stored in decentralized storage for free, whether public or private</p>
+                                <p css={SIXTEXT}>All data is stored in decentralized storage for free, whether public or
+                                    private</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain configuration</p>
+                                <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain
+                                    configuration</p>
                             </div>
                         </div>
                         <div css={SECONDSIX}>
                             <div css={SIXCON} style={{marginLeft: "20px"}}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized server</p>
+                                <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized
+                                    server</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test => final trade</p>
+                                <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test =>
+                                    final trade</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>All data will not be obtained from the data source until the final transaction</p>
+                                <p css={SIXTEXT}>All data will not be obtained from the data source until the final
+                                    transaction</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div css={STYLE_CONTENT3}>
-                    <p css={CONTENT3_TIT}>Hold all your data <br/>  On IStorage</p>
+                    <p css={CONTENT3_TIT}>Hold all your data <br/> On IStorage</p>
                     <div css={CONTENT3_CONBOX}>
                         <div css={CONBOX_LEFT} style={{marginRight: "20px"}}>
                             <p css={LEFT_1}>MULTI-CHAIN</p>
@@ -532,14 +547,20 @@ function IndexPage() {
                                 different chains have their own advantages.
                                 After you store data on different storage chains, you need to operate your data on
                                 different chain platforms. This is complicated and not suitable for unified
-                                operation<br/><span></span><br/>With IStorage you can store and modify data on different storage chains, as well as switch storage platforms for data. </p>
+                                operation<br/><span></span><br/>With IStorage you can store and modify data on different
+                                storage chains, as well as switch storage platforms for data. </p>
                             <img src="/static/con3left.png" style={{width: "100%"}} alt=""/>
                         </div>
                         <div css={CONBOX_LEFT}>
                             <p css={LEFT_1}>CROSS-CHAIN</p>
                             <p css={LEFT_2}>Building a cross-chain data metaverse based on W3DS</p>
-                            <p css={LEFT_3}>Entering the era of web3, driven by the increasing prosperity of the blockchain ecosystem, the amount of data is also growing explosively, followed by the utilization and transaction of data. We create its own data profile for each data through the 'W3DS' protocol. Users can find suitable data through multiple dimensions<br/><span></span><br/>
-                                IStorage provides a cross-chain data metaverse, you can profile data on different chains, or you can mint data into NFT to support transactions</p>
+                            <p css={LEFT_3}>Entering the era of web3, driven by the increasing prosperity of the
+                                blockchain ecosystem, the amount of data is also growing explosively, followed by the
+                                utilization and transaction of data. We create its own data profile for each data
+                                through the 'W3DS' protocol. Users can find suitable data through multiple
+                                dimensions<br/><span></span><br/>
+                                IStorage provides a cross-chain data metaverse, you can profile data on different
+                                chains, or you can mint data into NFT to support transactions</p>
                             <img src="/static/con3right.png" style={{height: "330px", margin: "0 auto"}}
                                  mode="aspectFit" alt=""/>
                         </div>
@@ -550,10 +571,12 @@ function IndexPage() {
                     <div css={FOOTER_CON}>
                         <div css={FOOTER_CONLEFT}>
                             <p css={CONLEFT_P1}>IStorage is your own fully decentralized data platform</p>
-                            <p css={CONLEFT_P2}>The architecture diagram is updated in real time and the code has been open sourced</p>
+                            <p css={CONLEFT_P2}>The architecture diagram is updated in real time and the code has been
+                                open sourced</p>
                             <button onClick={function (e) {
-                                window.open("https://github.com/ZhangPeibin/IPFSpace","_blank")
-                            }} css={CONLEFT_BTN}>Visit Github</button>
+                                window.open("https://github.com/ZhangPeibin/IPFSpace", "_blank")
+                            }} css={CONLEFT_BTN}>Visit Github
+                            </button>
                         </div>
                         <div css={FOOTER_CONRIGHT}>
                             <img src="/static/footCon.png" alt=""/>
@@ -561,7 +584,62 @@ function IndexPage() {
                     </div>
                 </div>
 
-                <section  style={{  background: "#2B314F"}}  className='contact container-fluid bg-gray ' id="contact">
+                <section style={{background: "#2B314F", color: "#fff"}} className='roadmap container-fluid bg-gray '
+                         id="roadmap">
+                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
+                        <div className="App_left__j7ytm" style={{marginBottom: 48}}>
+                            <div className="App_markdown__B3Yg5">
+                                <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4" level="2">Roadmap</a>
+                                <p><strong>The Filecoin Virtual Machine is being introduced incrementally.</strong> This
+                                    minimizes the risk of disruption to the network, and gives developers plenty of
+                                    opportunities to engage early on.</p>
+                            </div>
+                        </div>
+
+                        <span className="App_timelineItem___1W7J">
+                            <span className="App_timelineItemDate__E0zPY">
+                                <div>Feb 2022</div>
+                            </span>
+                            <span className="App_timelineItemDot___6Cxz"
+                                  style={{background: "#0e67ff", color: "#ffffff"}}>
+
+                            </span>
+                            <span className="App_timelineItemText__neUgD">
+                                <section className="App_line__sMNHr"></section>
+                                <div className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
+                                <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
+                                    <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
+                                    A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
+                                    The canaries are monitored for consensus faults and to gather telemetry. This milestone is a testing milestone that's critical to collect raw execution data to feed into the overhaul of the gas model, in preparation for user-programmability. It implies no network upgrade.
+                                    </p>
+                                </div>
+                            </span>
+                        </span>
+
+                        <span className="App_timelineItem___1W7J">
+                            <span className="App_timelineItemDate__E0zPY">
+                                <div>Feb 2022</div>
+                            </span>
+                            <span className="App_timelineItemDot___6Cxz"
+                                  style={{background: "#0e67ff", color: "#ffffff"}}>
+
+                            </span>
+                            <span className="App_timelineItemText__neUgD">
+                                <section className="App_line__sMNHr"></section>
+                                <div className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
+                                <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
+                                    <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
+                                    A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
+                                    The canaries are monitored for consensus faults and to gather telemetry. This milestone is a testing milestone that's critical to collect raw execution data to feed into the overhaul of the gas model, in preparation for user-programmability. It implies no network upgrade.
+                                    </p>
+                                </div>
+                            </span>
+                        </span>
+
+                    </div>
+                </section>
+
+                <section style={{background: "#2B314F"}} className='contact container-fluid bg-gray ' id="contact">
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='text-center'>
@@ -574,13 +652,17 @@ function IndexPage() {
                                                 <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact us</p>
                                                 <ul className="social justify-content-center">
                                                     <li className="social__item">
-                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'} className="social__link"><i className="fab fa-twitter"></i></a>
+                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'}
+                                                           className="social__link"><i
+                                                            className="fab fa-twitter"></i></a>
                                                     </li>
                                                     <li className="social__item">
-                                                        <a href="#" className="social__link" target={'_blank'}><i className="fab fa-discord"></i></a>
+                                                        <a href="#" className="social__link" target={'_blank'}><i
+                                                            className="fab fa-discord"></i></a>
                                                     </li>
                                                     <li className="social__item">
-                                                        <a href="https://t.me/peibin" className="social__link" target={'_blank'}><i className="fab fa-twitch"></i></a>
+                                                        <a href="https://t.me/peibin" className="social__link"
+                                                           target={'_blank'}><i className="fab fa-twitch"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
