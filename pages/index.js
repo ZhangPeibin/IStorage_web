@@ -3,6 +3,9 @@ import { jsx, css } from "@emotion/react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
+import Faq from 'react-faq-component';
+
+
 
 const STYLE_HEAD = css`
   width: 100%;
@@ -332,6 +335,22 @@ const CONLEFT_BTN = css`
   margin-top: 20px;
 `
 
+const data = {
+    rows: [
+        {
+            title: "How to ensure login security ? ",
+            content: "When the user logs in through the wallet or Magic, the previous section will use the keccak_256 method to generate a unique seed from the wallet address or mailbox, and use the ed25519 method provided by textile to obtain the unique secret key. Everything is done on the user side. "
+        },
+        {
+            title: "When is the official launch?",
+            content: "We will open Testnet 1.0 after the feature is complete, so stay tuned!"
+        },
+        {
+            title: "Will a DAO be built? ",
+            content: "Yes, we will build DAO. We will establish a data audit mechanism, which will take DAO as the core to ensure the quality and standardization of the data market. Of course, there are more DAO functions to promote ecological development."
+        }]
+}
+
 
 function IndexPage() {
     const router = useRouter()
@@ -528,8 +547,48 @@ function IndexPage() {
                         </div>
                     </div>
                 </div>
+                <section className='faq container' id="faq">
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='text-center'>
+                                <h2>FAQ</h2>
+                                <div className="small-border"></div>
+                            </div>
+                            <Faq data={data}/>
+                        </div>
+                    </div>
+                </section>
 
-
+                <section className='contact container-fluid bg-gray ' id="contact">
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='text-center'>
+                                <h2>Contact us</h2>
+                                <div className="small-border"></div>
+                                <footer className="footer bg__gradient">
+                                    <div className="footer__wrapper padding-top padding-bottom">
+                                        <div className="container">
+                                            <div className="footer__content text-center">
+                                                <p>We are glad that you can contact us</p>
+                                                <ul className="social justify-content-center">
+                                                    <li className="social__item">
+                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'} className="social__link"><i className="fab fa-twitter"></i></a>
+                                                    </li>
+                                                    <li className="social__item">
+                                                        <a href="#" className="social__link" target={'_blank'}><i className="fab fa-discord"></i></a>
+                                                    </li>
+                                                    <li className="social__item">
+                                                        <a href="https://t.me/peibin" className="social__link" target={'_blank'}><i className="fab fa-twitch"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
 
