@@ -117,7 +117,7 @@ const STYLE_CONTENT1 = css`
   height: 830px;
   background: #21263e;
   overflow: hidden;
-  font-size: 52px;
+  
   font-family: D-DIN;
   font-weight: bold;
   color: #FFFFFF;
@@ -126,6 +126,7 @@ const CONTENT1_TIT = css`
   width: 100%;
   height: 228px;
   color: #fff;
+  font-size: 52px;
   text-align: center;
   line-height: 228px;
   overflow: hidden;
@@ -167,7 +168,7 @@ const STYLE_CONTENT2 = css`
   text-align: center;
 `
 const CONTENT2_TIT = css`
-  font-size: 40px;
+  font-size: 52px;
   font-family: D-DIN;
   font-weight: bold;
   color: #FFFFFF;
