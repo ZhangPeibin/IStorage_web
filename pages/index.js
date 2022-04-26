@@ -175,16 +175,25 @@ const CONTENT2_TIT = css`
   padding-top: 100px;
 `
 const CONTENT2_CON = css`
-  font-size: 16px;
-  font-family: PingFang SC;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
-  line-height: 30px;
+  padding: 0;
+  margin: 0;
 `
+const CONTENT2_CON_SUB = css`
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  padding: 0;
+  margin-top: 4px;
+`
+
+
 const CONTENT2_SIXBOX = css`
   width: 1200px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 60px;
 `
 
 const FIRSTSIX = css``
@@ -300,7 +309,6 @@ const FOOTER_CONRIGHT = css`
 `
 const CONLEFT_P1 = css`
   font-size: 46px;
-  font-family: D-DIN;
   font-weight: bold;
   color: #FFFFFF;
   line-height: 65px;
@@ -308,7 +316,6 @@ const CONLEFT_P1 = css`
 
 const CONLEFT_P2 = css`
   font-size: 20px;
-  font-family: PingFang SC;
   font-weight: 500;
   color: #FFFFFF;
   line-height: 34px;
@@ -441,9 +448,11 @@ function IndexPage() {
                 <div css={STYLE_CONTENT2}>
                     <p css={CONTENT2_TIT}>Keys of <span
                         style={{color: "#8774FD"}}>IStorage</span></p>
-                    <p css={CONTENT2_CON}><span style={{color: "#8774FD"}}>IStorage</span> is fully
-                        decentralized and will be owned by Data DAO </p>
-                    <p css={CONTENT2_CON}>Devs cannot control anyone's data and trace data back to individuals,All is Decentralized</p>
+                    <p css={CONTENT2_CON}>
+                        <span style={{color: "#8774FD"}}>IStorage</span> is fully
+                        decentralized and will be owned by Data DAO
+                    </p>
+                    <p css={CONTENT2_CON_SUB}>Devs cannot control anyone's data and trace data back to individuals,All is Decentralized</p>
                     {/* 六边形图 */}
                     <div css={CONTENT2_SIXBOX}>
                         <div css={FIRSTSIX}>
