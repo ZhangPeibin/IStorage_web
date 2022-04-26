@@ -321,7 +321,7 @@ const CONLEFT_BTN = css`
   font-weight: bold;
   color: #FFFFFF;
   line-height: 48px;
-  margin-top: 40px;
+  margin-top: 20px;
 `
 
 
@@ -470,7 +470,7 @@ function IndexPage() {
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Multi-chain marketplace allows users to choose the mode of bid => data test => final trade</p>
+                                <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test => final trade</p>
                             </div>
                             <div css={SIXCON}>
                                 <img src="/static/conbg.png" css={SIXIMG} alt=""/>
@@ -507,11 +507,11 @@ function IndexPage() {
                     <img css={FOOTER_IMG} src="/static/footBg.png" alt=""/>
                     <div css={FOOTER_CON}>
                         <div css={FOOTER_CONLEFT}>
-                            <p css={CONLEFT_P1}>EACH .BIT IS A POWERFUL SELF-SOVEREIGN DATA CONTAINER.</p>
-                            <p css={CONLEFT_P2}>YOU CAN STORE ANY TYPE OF DATA IN YOUR .BIT, AND APPS CAN READ THEM
-                                BEFORE PROVIDING SERVICE FOR YOU.</p>
-                            <button css={CONLEFT_BTN}>MORE ABOUT DATA CONTAINER  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;->
-                            </button>
+                            <p css={CONLEFT_P1}>IStorage is your own fully decentralized data platform</p>
+                            <p css={CONLEFT_P2}>The architecture diagram is updated in real time and the code has been open sourced</p>
+                            <button onClick={function (e) {
+                                window.open("https://github.com/ZhangPeibin/IPFSpace","_blank")
+                            }} css={CONLEFT_BTN}>Visit Github</button>
                         </div>
                         <div css={FOOTER_CONRIGHT}>
                             <img src="/static/footCon.png" alt=""/>
