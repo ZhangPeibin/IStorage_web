@@ -584,14 +584,14 @@ function IndexPage() {
                     </div>
                 </div>
 
-                <section style={{background: "#2B314F", color: "#fff"}} className='roadmap container-fluid bg-gray '
+                <section style={{background: "#2B314F", color: "#fff",}} className='roadmap container-fluid bg-gray '
                          id="roadmap">
                     <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
                         <div className="App_left__j7ytm" style={{marginBottom: 48}}>
-                            <div className="App_markdown__B3Yg5">
+                <div className="App_markdown__B3Yg5" style={{ width: "100%", textAlign:"center"}}>
                                 <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4" level="2">Roadmap</a>
                                 <p><strong>The Filecoin Virtual Machine is being introduced incrementally.</strong> This
-                                    minimizes the risk of disruption to the network, and gives developers plenty of
+                                    minimizes the risk of disruption <br/>to the network, and gives developers plenty of
                                     opportunities to engage early on.</p>
                             </div>
                         </div>
