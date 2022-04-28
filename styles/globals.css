@@ -233,8 +233,6 @@ ol {
     font-size: 52px;
 }
 
-.App_synthetich2__6_CLu:hover, .App_synthetich2__6_CLu:visited {
-}
 
 .App_markdown__B3Yg5 h2 {
     font-family: Heading;
@@ -272,9 +270,6 @@ ol {
     text-decoration: none
 }
 
-.App_markdown__B3Yg5 a:hover {
-    opacity: .6
-}
 
 .App_markdown__B3Yg5 blockquote > p {
     font-size: var(--typescale-1);

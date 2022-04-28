@@ -3,7 +3,6 @@ import {jsx, css} from "@emotion/react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
-import Faq from 'react-faq-component';
 
 
 const STYLE_HEAD = css`
@@ -412,8 +411,6 @@ function IndexPage() {
                                 <a onClick={() => {
                                 }} className="nav-link" href="#roadmap">Roadmap</a>
                                 <a onClick={() => {
-                                }} className="nav-link" href="#faq">Faq</a>
-                                <a onClick={() => {
                                 }} className="nav-link" href="#contact">Contact</a>
                             </div>
                         </div>
@@ -590,9 +587,7 @@ function IndexPage() {
                         <div className="App_left__j7ytm" style={{marginBottom: 48}}>
                             <div className="App_markdown__B3Yg5">
                                 <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4" level="2">Roadmap</a>
-                                <p><strong>The Filecoin Virtual Machine is being introduced incrementally.</strong> This
-                                    minimizes the risk of disruption to the network, and gives developers plenty of
-                                    opportunities to engage early on.</p>
+                                <p><strong> IStorage will keep updated with the latest project progress.</strong> </p>
                             </div>
                         </div>
 
@@ -626,7 +621,7 @@ function IndexPage() {
                             </span>
                             <span className="App_timelineItemText__neUgD">
                                 <section className="App_line__sMNHr"></section>
-                                <div className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
+                                <div className="App_h3__exlvD">Milestone 1: Lotus mainnet canaries with FVM support</div>
                                 <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
                                     <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
                                     A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
@@ -654,9 +649,9 @@ function IndexPage() {
                                                     <li className="social__item">
                                                       <a href="https://twitter.com/IPFSpace" target={'_blank'} style={{ color:"#fff"}} className="social__link"><i className="fab fa-twitter"></i></a>
                                                     </li>
-                                                    <li className="social__item">
-                                                        <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>
-                                                    </li>
+                                                    {/*<li className="social__item">*/}
+                                                    {/*    <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>*/}
+                                                    {/*</li>*/}
                                                     <li className="social__item">
                                                         <a href="https://t.me/peibin" className="social__link" style={{ color:"#fff"}} target={'_blank'}><i className="fab fa-twitch"></i></a>
                                                     </li>
