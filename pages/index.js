@@ -581,11 +581,11 @@ function IndexPage() {
                     </div>
                 </div>
 
-                <section style={{background: "#2B314F", color: "#fff"}} className='roadmap container-fluid bg-gray '
+                <section style={{background: "#2B314F", color: "#fff",}} className='roadmap container-fluid bg-gray '
                          id="roadmap">
                     <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
                         <div className="App_left__j7ytm" style={{marginBottom: 48}}>
-                            <div className="App_markdown__B3Yg5">
+                <div className="App_markdown__B3Yg5" style={{ width: "100%", textAlign:"center"}}>
                                 <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4" level="2">Roadmap</a>
                                 <p><strong> IStorage will keep updated with the latest project progress.</strong> </p>
                             </div>
