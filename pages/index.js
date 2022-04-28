@@ -321,7 +321,7 @@ const FOOTER_CONRIGHT = css`
   width: 780px;
   height: 100%;
   padding: 80px 0;
-  margin-left: 172px ;
+  margin-left: 172px;
 `
 const CONLEFT_P1 = css`
   font-size: 46px;
@@ -545,8 +545,9 @@ function IndexPage() {
                                 different chains have their own advantages.
                                 After you store data on different storage chains, you need to operate your data on
                                 different chain platforms. This is complicated and not suitable for unified
-                                operation<br/><span></span><br/>With IStorage you can store and modify data on different storage chains, as well as switch storage platforms for data. </p>
-                <img src="/static/con3left.png" style={{ width: "100%", marginTop:"100px"}} alt=""/>
+                                operation<br/><span></span><br/>With IStorage you can store and modify data on different
+                                storage chains, as well as switch storage platforms for data. </p>
+                            <img src="/static/con3left.png" style={{width: "100%", marginTop: "100px"}} alt=""/>
                         </div>
                         <div css={CONBOX_LEFT}>
                             <p css={LEFT_1}>CROSS-CHAIN</p>
@@ -583,11 +584,13 @@ function IndexPage() {
 
                 <section style={{background: "#2B314F", color: "#fff",}} className='roadmap container-fluid bg-gray '
                          id="roadmap">
-                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
-                        <div className="App_left__j7ytm" style={{marginBottom: 48}}>
-                <div className="App_markdown__B3Yg5" style={{ width: "100%", textAlign:"center"}}>
-                                <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4" level="2">Roadmap</a>
-                                <p><strong> IStorage will keep updated with the latest project progress.</strong> </p>
+                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88,background:"#333"}}>
+                        <div className="App_left__j7ytm" style={{marginBottom: 48,textAlign:"center",alignItems:"center"}}>
+                            <div className="App_markdown__B3Yg5"
+                                 style={{textAlign:"center",alignItems:"center"}}>
+                                <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4"
+                                   level="2">Roadmap</a>
+                                <p><strong> IStorage will keep updated with the latest project progress.</strong></p>
                             </div>
                         </div>
 
@@ -601,7 +604,8 @@ function IndexPage() {
                             </span>
                             <span className="App_timelineItemText__neUgD">
                                 <section className="App_line__sMNHr"></section>
-                                <div className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
+                                <div
+                                    className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
                                 <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
                                     <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
                                     A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
@@ -621,7 +625,8 @@ function IndexPage() {
                             </span>
                             <span className="App_timelineItemText__neUgD">
                                 <section className="App_line__sMNHr"></section>
-                                <div className="App_h3__exlvD">Milestone 1: Lotus mainnet canaries with FVM support</div>
+                                <div
+                                    className="App_h3__exlvD">Milestone 1: Lotus mainnet canaries with FVM support</div>
                                 <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
                                     <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
                                     A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
@@ -645,15 +650,20 @@ function IndexPage() {
                                         <div className="container">
                                             <div className="footer__content text-center">
                                                 <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact us</p>
-                                                <ul className="social justify-content-center"  style={{ marginTop:"40px"}}>
+                                                <ul className="social justify-content-center"
+                                                    style={{marginTop: "40px"}}>
                                                     <li className="social__item">
-                                                      <a href="https://twitter.com/IPFSpace" target={'_blank'} style={{ color:"#fff"}} className="social__link"><i className="fab fa-twitter"></i></a>
+                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'}
+                                                           style={{color: "#fff"}} className="social__link"><i
+                                                            className="fab fa-twitter"></i></a>
                                                     </li>
                                                     {/*<li className="social__item">*/}
                                                     {/*    <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>*/}
                                                     {/*</li>*/}
                                                     <li className="social__item">
-                                                        <a href="https://t.me/peibin" className="social__link" style={{ color:"#fff"}} target={'_blank'}><i className="fab fa-twitch"></i></a>
+                                                        <a href="https://t.me/peibin" className="social__link"
+                                                           style={{color: "#fff"}} target={'_blank'}><i
+                                                            className="fab fa-twitch"></i></a>
                                                     </li>
                                                 </ul>
                                             </div>
