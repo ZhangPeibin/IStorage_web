@@ -452,7 +452,7 @@ function IndexPage() {
                     <p css={CONTENT1_TIT}>Why IStorage</p>
                     <div css={CONTENT1_CONBOX}>
                         <dl css={ALITBOX}>
-                            <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
+                            <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
                             <dd>
                                 <p css={ALITBOX_CON1}>Decentralized Identity</p>
                             </dd>
@@ -462,7 +462,7 @@ function IndexPage() {
                             </dt>
                         </dl>
                         <dl css={ALITBOX} style={{margin: " 0 63px"}}>
-                            <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
+                            <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
                             <dd>
                                 <p css={ALITBOX_CON1}>Multi-Chain storage</p>
                             </dd>
@@ -582,19 +582,19 @@ function IndexPage() {
                     </div>
                 </div>
 
-                <section style={{background: "#2B314F", color: "#fff",}} className='roadmap container-fluid bg-gray '
+                <section style={{background: "#2b314f", color: "#fff",}} className='roadmap container-fluid bg-gray '
                          id="roadmap">
-                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88,background:"#333"}}>
-                        <div className="App_left__j7ytm" style={{marginBottom: 48,textAlign:"center",alignItems:"center"}}>
+                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
+                        <div className="App_left__j7ytm" style={{marginBottom: 48,width:"1120px",textAlign:"center"}}>
                             <div className="App_markdown__B3Yg5"
-                                 style={{textAlign:"center",alignItems:"center"}}>
+                                 style={{textAlign: "center",width:"1120px"}}>
                                 <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4"
                                    level="2">Roadmap</a>
                                 <p><strong> IStorage will keep updated with the latest project progress.</strong></p>
                             </div>
                         </div>
 
-                        <span className="App_timelineItem___1W7J">
+                        <span  className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
                                 <div>Feb 2022</div>
                             </span>
@@ -639,7 +639,7 @@ function IndexPage() {
                     </div>
                 </section>
 
-                <section style={{background: "#2B314F"}} className='contact container-fluid bg-gray ' id="contact">
+                <section style={{background: "#21263e"}} className='contact container-fluid bg-gray ' id="contact">
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='text-center'>
