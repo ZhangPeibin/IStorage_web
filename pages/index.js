@@ -349,6 +349,7 @@ const CONLEFT_BTN = css`
   margin-top: 20px;
 `
 
+
 const data = {
     rows: [
         {
@@ -589,8 +590,7 @@ function IndexPage() {
                         <div className="App_left__j7ytm" style={{marginBottom: 48,width:"1120px",textAlign:"center"}}>
                             <div className="App_markdown__B3Yg5"
                                  style={{textAlign: "center",width:"1120px"}}>
-                                <a id="roadmap-4" className="App_synthetich2__6_CLu" href="#roadmap-4"
-                                   level="2">Roadmap</a>
+                                <a id="roadmap-4" className="App_synthetich2__6_CLu deleteHover" href="#roadmap-4"                                    level="2">Roadmap</a>
                                 <p><strong> IStorage will keep updated with the latest project progress.</strong></p>
                             </div>
                         </div>
