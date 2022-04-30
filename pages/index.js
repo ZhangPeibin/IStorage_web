@@ -154,6 +154,7 @@ const ALITBOX_CON1 = css`
   font-family: Manrope-ExtraBold;
   font-size: 1.375rem;
   text-align: center;
+  margin-top: 4px;
   color: #FFFFFF;
   line-height: 50px;
 `
@@ -593,8 +594,8 @@ function IndexPage() {
                                 <p><strong> IStorage will keep updated with the latest project progress.</strong></p>
                             </div>
                         </div>
-
-                        <span  className="App_timelineItem___1W7J">
+                        <div style={{marginLeft:200}}>
+                            <span  className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
                                 <div>Feb 2022</div>
                             </span>
@@ -615,7 +616,7 @@ function IndexPage() {
                             </span>
                         </span>
 
-                        <span className="App_timelineItem___1W7J">
+                            <span className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
                                 <div>Feb 2022</div>
                             </span>
@@ -635,6 +636,7 @@ function IndexPage() {
                                 </div>
                             </span>
                         </span>
+                        </div>
 
                     </div>
                 </section>
