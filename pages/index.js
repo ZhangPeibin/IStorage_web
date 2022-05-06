@@ -147,7 +147,7 @@ const ALITBOX = css`
   border-radius: 4px 4px 8px 8px;
   padding: 50px;
   text-align: center;
-  display: inline-block;
+  float: left;
 `
 const ALITBOX_CON1 = css`
   font-weight: bold;
@@ -453,7 +453,7 @@ function IndexPage() {
                 <div css={STYLE_CONTENT1}>
                     <p css={CONTENT1_TIT}>Why IStorage</p>
                     <div css={CONTENT1_CONBOX}>
-                        <dl css={ALITBOX}>
+                        <div css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
                             <dd>
                                 <p css={ALITBOX_CON1}>Decentralized Identity</p>
@@ -462,8 +462,8 @@ function IndexPage() {
                                 <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases
                                     personal privacy and autonomous control of data</p>
                             </dt>
-                        </dl>
-                        <dl css={ALITBOX} style={{margin: " 0 63px"}}>
+                        </div>
+                        <div css={ALITBOX} style={{marginLeft: "63px",marginRight: "63px"}}>
                             <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
                             <dd>
                                 <p css={ALITBOX_CON1}>Multi-Chain storage</p>
@@ -472,8 +472,8 @@ function IndexPage() {
                                 <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data
                                     cross-chain and aggregation interaction capabilities</p>
                             </dt>
-                        </dl>
-                        <dl css={ALITBOX}>
+                        </div>
+                        <div css={ALITBOX}>
                             <img style={{display: "inline-block"}} src="/static/li2.png" alt=""/>
                             <dd>
                                 <p css={ALITBOX_CON1}>Cross-Chain market</p>
@@ -482,7 +482,7 @@ function IndexPage() {
                                 <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It
                                     allows data transactions on different chains</p>
                             </dt>
-                        </dl>
+                        </div>
                     </div>
                 </div>
                 <div css={STYLE_CONTENT2}>
