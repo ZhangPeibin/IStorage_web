@@ -3,7 +3,7 @@ import {jsx, css} from "@emotion/react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
-
+import WebsitePrototypeWrapper from 'components/core/WebsitePrototypeWrapper'
 
 const STYLE_HEAD = css`
   width: 100%;
@@ -48,23 +48,24 @@ const BANNER_TXT = css`
   width: 100%;
   text-align: center;
   color: #fff;
-  font-weight: bold;
   font-size: 44px;
   text-align: center;
-  line-height: 70px;
+  line-height: 150px;//todo edit 
   position: absolute;
   left: 50%;
+  font-family: Times;
   top: 20%;
   transform: translate(-50%)
 `
 const BANNER_BTN = css`
-  width: 163px;
-  height: 52px;
+  padding-left: 32px;
+  padding-right: 32px;
   background: linear-gradient(-90deg, #5352FC 0%, #6BA2FF 100%);
   color: #fff;
   font-size: 20px;
   text-align: center;
   line-height: 52px;
+  font-family:"Times New Roman";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -130,7 +131,7 @@ const CONTENT1_TIT = css`
   color: #fff;
   font-size: 52px;
   text-align: center;
-  line-height: 228px;
+  line-height: 128px;
   overflow: hidden;
   margin-top: 76px;
 `
@@ -349,7 +350,11 @@ const CONLEFT_BTN = css`
   margin-top: 20px;
 `
 
-
+const BANNER_TITLE = css`
+  font-size: 24px;
+  color: #FFFFFF;
+  font-family:"Times New Roman"
+`
 const data = {
     rows: [
         {
@@ -370,6 +375,7 @@ const data = {
 function IndexPage() {
     const router = useRouter()
     const whitePager = "https://hub.textile.io/ipfs/bafybeiei6dlmkuvvtahisbjcs7vufqbes6mta7pgoaenvtifvtsqechmu4";
+    const W3DS = "https://istorage.gitbook.io/w3ds/";
 
     const _whitePager = () => {
         window.open(whitePager, "_blank")
@@ -390,214 +396,229 @@ function IndexPage() {
         }
     }
 
-    const title = `Decentralized DataSharing Infrastructure`;
+    const title = `IStorage`;
     const description =
-        "Decentralized DataSharing Infrastructure, Based on IPFS & FileCoin ,Designed to store and share humanity's data";
+        "Build Decentralized Storage Aggregation Layer to establish a Data Metaverse";
     const url = "https://www.anipfs.space";
 
     return (
-        // <WebsitePrototypeWrapper title={title} description={description} url={url} >
-        // 新增页面代码
-        <div style={{width: '100%'}}>
-            <div css={STYLE_HEAD}>
-                <div style={{width: '1200px', margin: "auto",}}>
-                    <nav className="navbar navbar-expand-xl">
-                        <img style={{width: "150px", height: "42px", marginTop: "5px", display: "inline-block"}}
-                             src="../static/logo.png" alt=""/>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                            <div className="navbar-nav">
-                                <a onClick={() => {
-                                }} className="nav-link" href="#home">Home</a>
-                                <a onClick={() => {
-                                }} className="nav-link" href="#home">What is W3DS</a>
-                                <a onClick={() => {
-                                }} className="nav-link" href="#roadmap">Roadmap</a>
-                                <a onClick={() => {
-                                }} className="nav-link" href="#contact">Contact</a>
+        <WebsitePrototypeWrapper title={title} description={description} url={url}>
+            <div style={{width: '100%'}}>
+                <div css={STYLE_HEAD}>
+                    <div style={{width: '1200px', margin: "auto",}}>
+                        <nav className="navbar navbar-expand-xl">
+                            {/*<img style={{width: "150px", height: "42px", marginTop: "5px", }}*/}
+                            {/*     src="../static/logo.png" alt=""/>*/}
+                            <span onClick={() => {
+                            }} css={BANNER_TITLE} href="#home">IStorage</span>
+                            <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                                <div className="navbar-nav">
+                                    <a onClick={() => {
+                                    }} className="nav-link" href="#home">Home</a>
+                                    <a onClick={() => {
+                                        window.open(W3DS, "_blank")
+                                    }} className="nav-link" href="#home">What is W3DS</a>
+                                    <a onClick={() => {
+                                    }} className="nav-link" href="#roadmap">Roadmap</a>
+                                    <a onClick={() => {
+
+                                    }} className="nav-link" href="#contact">Contact</a>
+                                </div>
                             </div>
-                        </div>
-                        <div css={STYLE_signin} onClick={_signIn}>Launch App</div>
-                    </nav>
-                </div>
-            </div>
-            <div css={STYLE_BANNER}>
-                <img src="/static/banner.png" style={{width: "100%"}} alt=""/>
-                <p css={BANNER_TXT}>Build Decentralized Storage Aggregation Layer
-                </p>
-                <p css={BANNER_TXT} style={{marginTop: 56}}>Designed to establish a Data Metaverse</p>
-                <div css={BANNER_BTN} onClick={_whitePager}>White Pager</div>
-            </div>
-            <div css={STYLE_BODY}>
-                <div css={STYLE_CONTENT}>
-                    <div css={CONTENT_HEAD}>
-                        <ul css={CONTENT_UL} style={{marginLeft: "0", paddingLeft: "0"}}>
-                            <li css={CONTENT_LI}>
-                                <h3 css={LI_TITLE}>Total Data</h3>
-                                <p css={LI_CON}>1352</p>
-                            </li>
-                            <li css={CONTENT_LI}>
-                                <h3 css={LI_TITLE}>Total Volume</h3>
-                                <p css={LI_CON}> 73.36 </p>
-                            </li>
-                            <li css={CONTENT_LI}>
-                                <h3 css={LI_TITLE}>Users</h3>
-                                <p css={LI_CON}>38</p>
-                            </li>
-                            <li css={CONTENT_LI}>
-                                <h3 css={LI_TITLE}>NFTS</h3>
-                                <p css={LI_CON}>456</p>
-                            </li>
-                        </ul>
+                            {/*<div css={STYLE_signin} onClick={_signIn}>Launch App</div>*/}
+                        </nav>
                     </div>
                 </div>
-                <div css={STYLE_CONTENT1}>
-                    <p css={CONTENT1_TIT}>Why IStorage</p>
-                    <div css={CONTENT1_CONBOX}>
-                        <dl css={ALITBOX}>
-                            <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
-                            <dd>
-                                <p css={ALITBOX_CON1}>Decentralized Identity</p>
-                            </dd>
-                            <dt>
-                                <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases
-                                    personal privacy and autonomous control of data</p>
-                            </dt>
-                        </dl>
-                        <dl css={ALITBOX} style={{margin: " 0 63px"}}>
-                            <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
-                            <dd>
-                                <p css={ALITBOX_CON1}>Multi-Chain storage</p>
-                            </dd>
-                            <dt>
-                                <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data
-                                    cross-chain and aggregation interaction capabilities</p>
-                            </dt>
-                        </dl>
-                        <dl css={ALITBOX}>
-                            <img style={{display: "inline-block"}} src="/static/li2.png" alt=""/>
-                            <dd>
-                                <p css={ALITBOX_CON1}>Cross-Chain market</p>
-                            </dd>
-                            <dt>
-                                <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It
-                                    allows data transactions on different chains</p>
-                            </dt>
-                        </dl>
-                    </div>
-                </div>
-                <div css={STYLE_CONTENT2}>
-                    <p css={CONTENT2_TIT}>Keys of <span
-                        style={{color: "#8774FD"}}>IStorage</span></p>
-                    <p css={CONTENT2_CON}>
-                        <span style={{color: "#8774FD"}}>IStorage</span> is fully
-                        decentralized and will be owned by Data DAO
+                <div css={STYLE_BANNER}>
+                    <img src="/static/banner.png" style={{width: "100%",height:700}} alt=""/>
+                    <p css={BANNER_TXT}>Build Decentralized Storage Aggregation Layer
                     </p>
-                    <p css={CONTENT2_CON_SUB}>Devs cannot control anyone's data and trace data back to individuals,All
-                        is Decentralized</p>
-                    {/* 六边形图 */}
-                    <div css={CONTENT2_SIXBOX}>
-                        <div css={FIRSTSIX}>
-                            <div css={SIXCON} style={{marginLeft: "20px"}}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Authorize signing with web3 wallet and produce identity via Ed25519</p>
-                            </div>
-                            <div css={SIXCON}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Link DID through Identity and build user's web3 social portrait with
-                                    DID</p>
-                            </div>
-                            <div css={SIXCON}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>All data is stored in decentralized storage for free, whether public or
-                                    private</p>
-                            </div>
-                            <div css={SIXCON}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain
-                                    configuration</p>
-                            </div>
+                    <p css={BANNER_TXT} style={{marginTop: 56}}>Designed to establish a Data Metaverse</p>
+                    <div css={BANNER_BTN} onClick={_whitePager}>Deck</div>
+                </div>
+                <div css={STYLE_BODY}>
+                    {/*<div css={STYLE_CONTENT}>*/}
+                    {/*    <div css={CONTENT_HEAD}>*/}
+                    {/*        <ul css={CONTENT_UL} style={{marginLeft: "0", paddingLeft: "0"}}>*/}
+                    {/*            <li css={CONTENT_LI}>*/}
+                    {/*                <h3 css={LI_TITLE}>Total Data</h3>*/}
+                    {/*                <p css={LI_CON}>1352</p>*/}
+                    {/*            </li>*/}
+                    {/*            <li css={CONTENT_LI}>*/}
+                    {/*                <h3 css={LI_TITLE}>Total Volume</h3>*/}
+                    {/*                <p css={LI_CON}> 73.36 </p>*/}
+                    {/*            </li>*/}
+                    {/*            <li css={CONTENT_LI}>*/}
+                    {/*                <h3 css={LI_TITLE}>Users</h3>*/}
+                    {/*                <p css={LI_CON}>38</p>*/}
+                    {/*            </li>*/}
+                    {/*            <li css={CONTENT_LI}>*/}
+                    {/*                <h3 css={LI_TITLE}>NFTS</h3>*/}
+                    {/*                <p css={LI_CON}>456</p>*/}
+                    {/*            </li>*/}
+                    {/*        </ul>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+                    <div css={STYLE_CONTENT1}>
+                        <p css={CONTENT1_TIT}>Why IStorage</p>
+                        <div css={CONTENT1_CONBOX}>
+                            <dl css={ALITBOX}>
+                                <img style={{display: "inline-block"}} src="/static/li3.png" alt=""/>
+                                <dd>
+                                    <p css={ALITBOX_CON1}>Decentralized Identity</p>
+                                </dd>
+                                <dt>
+                                    <p css={ALITBOX_CON2}>IStorage uses DID for user authentication, which increases
+                                        personal privacy and autonomous control of data</p>
+                                </dt>
+                            </dl>
+                            <dl css={ALITBOX} style={{margin: " 0 63px"}}>
+                                <img style={{display: "inline-block"}} src="/static/li1.png" alt=""/>
+                                <dd>
+                                    <p css={ALITBOX_CON1}>Multi-Chain storage</p>
+                                </dd>
+                                <dt>
+                                    <p css={ALITBOX_CON2}>IStorage will integrate multiple chains to provide data
+                                        cross-chain and aggregation interaction capabilities</p>
+                                </dt>
+                            </dl>
+                            <dl css={ALITBOX}>
+                                <img style={{display: "inline-block"}} src="/static/li2.png" alt=""/>
+                                <dd>
+                                    <p css={ALITBOX_CON1}>Cross-Chain market</p>
+                                </dd>
+                                <dt>
+                                    <p css={ALITBOX_CON2}>IStorage provides cross-chain data transaction functions. It
+                                        allows data transactions on different chains</p>
+                                </dt>
+                            </dl>
                         </div>
-                        <div css={SECONDSIX}>
-                            <div css={SIXCON} style={{marginLeft: "20px"}}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized
-                                    server</p>
+                    </div>
+                    <div css={STYLE_CONTENT2}>
+                        <p css={CONTENT2_TIT}>Keep <span
+                            style={{color: "#8774FD"}}>Decentralized</span></p>
+                        <p css={CONTENT2_CON}>
+                            <span style={{color: "#8774FD"}}>IStorage</span> is fully
+                            decentralized and will be owned by Data DAO
+                        </p>
+                        <p css={CONTENT2_CON_SUB}>Devs cannot control anyone's data and trace data back to
+                            individuals,All
+                            is Decentralized</p>
+                        {/* 六边形图 */}
+                        <div css={CONTENT2_SIXBOX}>
+                            <div css={FIRSTSIX}>
+                                <div css={SIXCON} style={{marginLeft: "20px"}}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>Authorize signing with web3 wallet and produce identity via
+                                        Ed25519</p>
+                                </div>
+                                <div css={SIXCON}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>Link DID through Identity and build user's web3 social portrait
+                                        with
+                                        DID</p>
+                                </div>
+                                <div css={SIXCON}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>All data is stored in decentralized storage for free, whether
+                                        public or
+                                        private</p>
+                                </div>
+                                <div css={SIXCON}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain
+                                        configuration</p>
+                                </div>
                             </div>
-                            <div css={SIXCON}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test =>
-                                    final trade</p>
-                            </div>
-                            <div css={SIXCON}>
-                                <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                <p css={SIXTEXT}>All data will not be obtained from the data source until the final
-                                    transaction</p>
+                            <div css={SECONDSIX}>
+                                <div css={SIXCON} style={{marginLeft: "20px"}}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized
+                                        server</p>
+                                </div>
+                                <div css={SIXCON}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test =>
+                                        final trade</p>
+                                </div>
+                                <div css={SIXCON}>
+                                    <img src="/static/conbg.png" css={SIXIMG} alt=""/>
+                                    <p css={SIXTEXT}>All data will not be obtained from the data source until the final
+                                        transaction</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div css={STYLE_CONTENT3}>
-                    <p css={CONTENT3_TIT}>Hold all your data <br/> On IStorage</p>
-                    <div css={CONTENT3_CONBOX}>
-                        <div css={CONBOX_LEFT} style={{marginRight: "20px"}}>
-                            <p css={LEFT_1}>MULTI-CHAIN</p>
-                            <p css={LEFT_2}>
-                                Support multi-chain data storage bottom layer</p>
-                            <p css={LEFT_3}>With the development of web3, different storage chains have been born, and
-                                different chains have their own advantages.
-                                After you store data on different storage chains, you need to operate your data on
-                                different chain platforms. This is complicated and not suitable for unified
-                                operation<br/><span></span><br/>With IStorage you can store and modify data on different
-                                storage chains, as well as switch storage platforms for data. </p>
-                            <img src="/static/con3left.png" style={{width: "100%", marginTop: "100px"}} alt=""/>
-                        </div>
-                        <div css={CONBOX_LEFT}>
-                            <p css={LEFT_1}>CROSS-CHAIN</p>
-                            <p css={LEFT_2}>Building a cross-chain data metaverse based on W3DS</p>
-                            <p css={LEFT_3}>Entering the era of web3, driven by the increasing prosperity of the
-                                blockchain ecosystem, the amount of data is also growing explosively, followed by the
-                                utilization and transaction of data. We create its own data profile for each data
-                                through the 'W3DS' protocol. Users can find suitable data through multiple
-                                dimensions<br/><span></span><br/>
-                                IStorage provides a cross-chain data metaverse, you can profile data on different
-                                chains, or you can mint data into NFT to support transactions</p>
-                            <img src="/static/con3right.png" style={{height: "330px", margin: "0 auto"}}
-                                 mode="aspectFit" alt=""/>
-                        </div>
-                    </div>
-                </div>
-                <div css={STYLE_BOTTOM} style={{background: " #21263e"}}>
-                    <img css={FOOTER_IMG} src="/static/footBg.png" alt=""/>
-                    <div css={FOOTER_CON}>
-                        <div css={FOOTER_CONLEFT}>
-                            <p css={CONLEFT_P1}>IStorage is your own fully decentralized data platform</p>
-                            <p css={CONLEFT_P2}>The architecture diagram is updated in real time and the code has been
-                                open sourced</p>
-                            <button onClick={function (e) {
-                                window.open("https://github.com/ZhangPeibin/IPFSpace", "_blank")
-                            }} css={CONLEFT_BTN}>Visit Github
-                            </button>
-                        </div>
-                        <div css={FOOTER_CONRIGHT}>
-                            <img src="/static/footCon.png" alt=""/>
+                    <div css={STYLE_CONTENT3}>
+                        <p css={CONTENT3_TIT}>Hold all your data <br/> On IStorage</p>
+                        <div css={CONTENT3_CONBOX}>
+                            <div css={CONBOX_LEFT} style={{marginRight: "20px"}}>
+                                <p css={LEFT_1}>MULTI-CHAIN</p>
+                                <p css={LEFT_2}>
+                                    Support multi-chain data storage bottom layer</p>
+                                <p css={LEFT_3}>With the development of web3, different storage chains have been born,
+                                    and
+                                    different chains have their own advantages.
+                                    After you store data on different storage chains, you need to operate your data on
+                                    different chain platforms. This is complicated and not suitable for unified
+                                    operation<br/><span></span><br/>With IStorage you can store and modify data on
+                                    different
+                                    storage chains, as well as switch storage platforms for data. </p>
+                                <img src="/static/con3left.png" style={{width: "100%", marginTop: "100px"}} alt=""/>
+                            </div>
+                            <div css={CONBOX_LEFT}>
+                                <p css={LEFT_1}>CROSS-CHAIN</p>
+                                <p css={LEFT_2}>Building a cross-chain data metaverse based on W3DS</p>
+                                <p css={LEFT_3}>Entering the era of web3, driven by the increasing prosperity of the
+                                    blockchain ecosystem, the amount of data is also growing explosively, followed by
+                                    the
+                                    utilization and transaction of data. We create its own data profile for each data
+                                    through the 'W3DS' protocol. Users can find suitable data through multiple
+                                    dimensions<br/><span></span><br/>
+                                    IStorage provides a cross-chain data metaverse, you can profile data on different
+                                    chains, or you can mint data into NFT to support transactions</p>
+                                <img src="/static/con3right.png" style={{height: "330px", margin: "0 auto"}}
+                                     mode="aspectFit" alt=""/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div css={STYLE_BOTTOM} style={{background: " #21263e"}}>
+                        <img css={FOOTER_IMG} src="/static/footBg.png" alt=""/>
+                        <div css={FOOTER_CON}>
+                            <div css={FOOTER_CONLEFT}>
+                                <p css={CONLEFT_P1}>IStorage is your own fully decentralized data platform</p>
+                                <p css={CONLEFT_P2}>The architecture diagram is updated in real time and the code has
+                                    been
+                                    open sourced</p>
+                                <button onClick={function (e) {
+                                    window.open("https://github.com/ZhangPeibin/IPFSpace", "_blank")
+                                }} css={CONLEFT_BTN}>Visit Github
+                                </button>
+                            </div>
+                            <div css={FOOTER_CONRIGHT}>
+                                <img src="/static/footCon.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
 
-                <section style={{background: "#2b314f", color: "#fff",}} className='roadmap container-fluid bg-gray '
-                         id="roadmap">
-                    <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
-                        <div className="App_left__j7ytm" style={{marginBottom: 48,width:"1120px",textAlign:"center"}}>
-                            <div className="App_markdown__B3Yg5"
-                                 style={{textAlign: "center",width:"1120px"}}>
-                                <a id="roadmap-4" className="App_synthetich2__6_CLu deleteHover" href="#roadmap-4"                                    level="2">Roadmap</a>
-                                <p><strong> IStorage will keep updated with the latest project progress.</strong></p>
+                    <section style={{background: "#2b314f", color: "#fff",}}
+                             className='roadmap container-fluid bg-gray '
+                             id="roadmap">
+                        <div className="Grid_grid__tdbxd" style={{marginTop: 96, marginBottom: 88}}>
+                            <div className="App_left__j7ytm"
+                                 style={{marginBottom: 48, width: "1120px", textAlign: "center"}}>
+                                <div className="App_markdown__B3Yg5"
+                                     style={{textAlign: "center", width: "1120px"}}>
+                                    <a id="roadmap-4" className="App_synthetich2__6_CLu deleteHover" href="#roadmap-4"
+                                       level="2">Roadmap</a>
+                                    <p><strong> IStorage will keep updated with the latest project progress.</strong>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div style={{marginLeft:200}}>
-                            <span  className="App_timelineItem___1W7J">
+                            <div style={{marginLeft: 200}}>
+                                <span className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
-                                <div>Feb 2022</div>
+                                <div>May 2022</div>
                             </span>
                             <span className="App_timelineItemDot___6Cxz"
                                   style={{background: "#0e67ff", color: "#ffffff"}}>
@@ -606,19 +627,18 @@ function IndexPage() {
                             <span className="App_timelineItemText__neUgD">
                                 <section className="App_line__sMNHr"></section>
                                 <div
-                                    className="App_h3__exlvD">Milestone 0: Lotus mainnet canaries with FVM support</div>
+                                    className="App_h3__exlvD">Milestone 0: Perfect the establishment of data market</div>
                                 <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
-                                    <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
-                                    A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
-                                    The canaries are monitored for consensus faults and to gather telemetry. This milestone is a testing milestone that's critical to collect raw execution data to feed into the overhaul of the gas model, in preparation for user-programmability. It implies no network upgrade.
+                                    <p>
+                                        We will improve the data NFT trading market based on Polygon, including the following points: data trading process design, NFT market design.
+Then Testnet 1.0 Launch Initiated .All users participating in the test will obtain contribution value according to the contribution amount. After the test is completed, airdrop will be carried out according to the contribution value.
                                     </p>
                                 </div>
                             </span>
                         </span>
-
-                            <span className="App_timelineItem___1W7J">
+                                <span className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
-                                <div>Feb 2022</div>
+                                <div>July 2022</div>
                             </span>
                             <span className="App_timelineItemDot___6Cxz"
                                   style={{background: "#0e67ff", color: "#ffffff"}}>
@@ -627,58 +647,78 @@ function IndexPage() {
                             <span className="App_timelineItemText__neUgD">
                                 <section className="App_line__sMNHr"></section>
                                 <div
-                                    className="App_h3__exlvD">Milestone 1: Lotus mainnet canaries with FVM support</div>
+                                    className="App_h3__exlvD">Milestone 1: Testnet 2.0 Launch Initiated</div>
                                 <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
-                                    <p>The reference FVM implementation has been integrated into a fork of Lotus (the Filecoin reference client).
-                                    A fleet of canary nodes have been launched on mainnet, running WASM-compiled built-in actors on the FVM.
-                                    The canaries are monitored for consensus faults and to gather telemetry. This milestone is a testing milestone that's critical to collect raw execution data to feed into the overhaul of the gas model, in preparation for user-programmability. It implies no network upgrade.
+                                    <p>
+                                        When the modification of Testnet 1.0 is completed, the top 200 users of Testnet 1.0 will be invited to test Testnet 2.0. Testnet 2.0 will focus on the interaction of core functions.
                                     </p>
                                 </div>
                             </span>
                         </span>
+                                <span className="App_timelineItem___1W7J">
+                            <span className="App_timelineItemDate__E0zPY">
+                                <div>Sep 2022</div>
+                            </span>
+                            <span className="App_timelineItemDot___6Cxz"
+                                  style={{background: "#0e67ff", color: "#ffffff"}}>
+
+                            </span>
+                            <span className="App_timelineItemText__neUgD">
+                                <section className="App_line__sMNHr"></section>
+                                <div
+                                    className="App_h3__exlvD">Milestone 2: Mainnet Launch Initiated</div>
+                                <div className="App_desc__3G6Gd" style={{marginTop: 12}}>
+                                    <p>
+                                        When the testnet is completed, we will choose a time to launch the mainnet and issue governance tokens at the same time. The airdrops obtained by the testnet can be exchanged for the mainnet token at this time.
+                                    </p>
+                                </div>
+                            </span>
+                        </span>
+                            </div>
+
                         </div>
+                    </section>
 
-                    </div>
-                </section>
+                    <section style={{background: "#21263e"}} className='contact container-fluid bg-gray ' id="contact">
+                        <div className='row'>
+                            <div className='col-lg-12'>
+                                <div className='text-center'>
+                                    <p css={CONTENT2_TIT_contact}>Contact us</p>
+                                    <div className="small-border"></div>
+                                    <footer className="footer bg__gradient">
+                                        <div className="footer__wrapper padding-top padding-bottom">
+                                            <div className="container">
+                                                <div className="footer__content text-center">
+                                                    <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact
+                                                        us</p>
+                                                    <ul className="social justify-content-center"
+                                                        style={{marginTop: "40px"}}>
+                                                        <li className="social__item">
+                                                            <a href="https://twitter.com/IPFSpace" target={'_blank'}
+                                                               style={{color: "#fff"}} className="social__link"><i
+                                                                className="fab fa-twitter"></i></a>
+                                                        </li>
+                                                        {/*<li className="social__item">*/}
+                                                        {/*    <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>*/}
+                                                        {/*</li>*/}
+                                                        <li className="social__item">
+                                                            <a href="mailto:wiki4zhang@gmail.com" className="social__link"
+                                                               style={{color: "#fff"}} target={'_blank'}><i
+                                                                className="far fa-envelope-open"></i></a>
 
-                <section style={{background: "#21263e"}} className='contact container-fluid bg-gray ' id="contact">
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='text-center'>
-                                <p css={CONTENT2_TIT_contact}>Contact us</p>
-                                <div className="small-border"></div>
-                                <footer className="footer bg__gradient">
-                                    <div className="footer__wrapper padding-top padding-bottom">
-                                        <div className="container">
-                                            <div className="footer__content text-center">
-                                                <p css={CONTENT2_CON_CONTACT}>We are glad that you can contact us</p>
-                                                <ul className="social justify-content-center"
-                                                    style={{marginTop: "40px"}}>
-                                                    <li className="social__item">
-                                                        <a href="https://twitter.com/IPFSpace" target={'_blank'}
-                                                           style={{color: "#fff"}} className="social__link"><i
-                                                            className="fab fa-twitter"></i></a>
-                                                    </li>
-                                                    {/*<li className="social__item">*/}
-                                                    {/*    <a href="#" className="social__link" target={'_blank'}><i style={{ color:"#fff"}} className="fab fa-discord"></i></a>*/}
-                                                    {/*</li>*/}
-                                                    <li className="social__item">
-                                                        <a href="https://t.me/peibin" className="social__link"
-                                                           style={{color: "#fff"}} target={'_blank'}><i
-                                                            className="fab fa-twitch"></i></a>
-                                                    </li>
-                                                </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </footer>
+                                    </footer>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-
+        </WebsitePrototypeWrapper>
 
     );
 }
