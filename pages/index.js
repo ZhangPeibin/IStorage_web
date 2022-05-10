@@ -148,7 +148,7 @@ const ALITBOX = css`
   border-radius: 4px 4px 8px 8px;
   padding: 50px;
   text-align: center;
-  display: inline-block;
+  float: left;
 `
 const ALITBOX_CON1 = css`
   font-weight: bold;
@@ -427,6 +427,7 @@ function IndexPage() {
                             </div>
                             {/*<div css={STYLE_signin} onClick={_signIn}>Launch App</div>*/}
                         </nav>
+
                     </div>
                 </div>
                 <div css={STYLE_BANNER}>
@@ -526,25 +527,22 @@ function IndexPage() {
                                 </div>
                                 <div css={SIXCON}>
                                     <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                    <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain
-                                        configuration</p>
+                                    <p css={SIXTEXT}>Encrypt and decrypt data using identities on the web frontend</p>
                                 </div>
                             </div>
                             <div css={SECONDSIX}>
                                 <div css={SIXCON} style={{marginLeft: "20px"}}>
                                     <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                    <p css={SIXTEXT}>User interface is hosted by the community on IPFS. No centralized
-                                        server</p>
+                                    <p css={SIXTEXT}>DID controls user file indexing system, personal data, cross-chain
+                                        configuration</p>
                                 </div>
                                 <div css={SIXCON}>
                                     <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                    <p css={SIXTEXT}>Marketplace allows users to choose the mode of bid => data test =>
-                                        final trade</p>
+                                    <p css={SIXTEXT}>Marketplace allows users to choose a pattern of "bid => data test => final deal"</p>
                                 </div>
                                 <div css={SIXCON}>
                                     <img src="/static/conbg.png" css={SIXIMG} alt=""/>
-                                    <p css={SIXTEXT}>All data will not be obtained from the data source until the final
-                                        transaction</p>
+                                    <p css={SIXTEXT}>All data will not be fetched  until the last transaction is completed</p>
                                 </div>
                             </div>
                         </div>
