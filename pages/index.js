@@ -70,7 +70,7 @@ const BANNER_BTN = css`
   color: #fff;
   font-size: 20px;
   text-align: center;
-  line-height: 52px;
+  line-height: 42px;
   font-family:"Times New Roman";
   position: absolute;
   left: 50%;
@@ -515,7 +515,7 @@ function IndexPage() {
                                     }} className="nav-link" href="#contact">Contact</a>
                                 </div>
                             </div>
-                            <div css={STYLE_signin} onClick={_signIn}>Launch App</div>
+                            <button css={STYLE_signin} onClick={_signIn}>Launch App</button>
                         </nav>
 
                     </div>
@@ -525,7 +525,7 @@ function IndexPage() {
                     <p css={BANNER_TXT}>Build Decentralized Storage Aggregation Layer
                     </p>
                     <p css={BANNER_TXT} style={{marginTop: 56}}>Designed to establish a Data Metaverse</p>
-                    <div css={BANNER_BTN} onClick={_whitePager}>Deck</div>
+                    <button css={BANNER_BTN} onClick={_whitePager}>Deck</button>
                 </div>
                 <div css={STYLE_BODY}>
                     {/*<div css={STYLE_CONTENT}>*/}
@@ -706,7 +706,7 @@ function IndexPage() {
                             <div style={{marginLeft: 200}}>
                                 <span className="App_timelineItem___1W7J">
                             <span className="App_timelineItemDate__E0zPY">
-                                <div>May 2022</div>
+                                <div>June 2022</div>
                             </span>
                             <span className="App_timelineItemDot___6Cxz"
                                   style={{background: "#0e67ff", color: "#ffffff"}}>
