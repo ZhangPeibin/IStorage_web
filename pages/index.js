@@ -383,7 +383,7 @@ function IndexPage() {
     const  getNetwork = () => getChainData(80001).network;
 
     const router = useRouter()
-    const whitePager = "https://hub.textile.io/ipfs/bafybeiei6dlmkuvvtahisbjcs7vufqbes6mta7pgoaenvtifvtsqechmu4";
+    const whitePager = "https://pitch.com/public/7d9a3314-c3f8-40e8-b19c-1291974c4bcb";
     const W3DS = "https://www.w3ds.world/";
     const APP = "https://app.istorage.one";
 
