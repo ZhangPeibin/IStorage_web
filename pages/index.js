@@ -4,6 +4,12 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, {useEffect, useState} from "react";
 import {useRouter} from 'next/router';
 import WebsitePrototypeWrapper from 'components/core/WebsitePrototypeWrapper'
+import Web3Modal from "web3modal";
+import {getChainData} from "../components/web3/network";
+import Web3 from "web3";
+import {generateMessageForEntropy, hashPersonalMessage} from "../components/web3/signMessage";
+import {BigNumber, utils} from "ethers";
+import {PrivateKey} from "@textile/hub";
 
 const STYLE_HEAD = css`
   width: 100%;
@@ -209,7 +215,7 @@ const CONTENT2_CON_SUB = css`
 
 const CONTENT2_SIXBOX = css`
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; 
   margin-top: 60px;
 `
 
@@ -373,9 +379,13 @@ const data = {
 
 
 function IndexPage() {
+
+    const  getNetwork = () => getChainData(80001).network;
+
     const router = useRouter()
     const whitePager = "https://hub.textile.io/ipfs/bafybeiei6dlmkuvvtahisbjcs7vufqbes6mta7pgoaenvtifvtsqechmu4";
-    const W3DS = "https://istorage.gitbook.io/w3ds/";
+    const W3DS = "https://www.w3ds.world/";
+    const APP = "https://app.istorage.one";
 
     const _whitePager = () => {
         window.open(whitePager, "_blank")
@@ -383,23 +393,103 @@ function IndexPage() {
     //鉴权
     const [isAuthenticated, setIsAuthenticated] = useState(false)
 
+    function initWeb3(provider) {
+        const web3 = new Web3(provider);
+        web3.eth.extend({
+            methods: [
+                {
+                    name: "chainId",
+                    call: "eth_chainId",
+                    outputFormatter: web3.utils.hexToNumber
+                }
+            ]
+        });
+
+        return web3;
+    }
+
+
     useEffect(() => {
         const isAuthenticated = localStorage.getItem('identity') ? true : false
         console.log("已登录：", isAuthenticated)
         setIsAuthenticated(isAuthenticated)
     }, [])
-    const _signIn = () => {
-        if (isAuthenticated) {
-            router.replace("/dashboard")
-        } else {
-            router.push("/user/auth")
-        }
+    const _signIn = async () => {
+        // const web3Modal = new Web3Modal({
+        //     network: getNetwork(),
+        //     cacheProvider: true,
+        // });
+        //
+        // const provider = await web3Modal.connect();
+        // const web3 = initWeb3(provider);
+        // await switchNetworkMumbai(web3);
+        // const accounts = await web3.eth.getAccounts();
+        // console.log(accounts)
+        // const address = accounts[0];
+        // const networkId = await web3.eth.net.getId();
+        // const chainId = await web3.eth.chainId()
+        // console.log(chainId)
+        // console.log(networkId)
+        // const message = generateMessageForEntropy(address, "MultiStorage", "MultiStorage")
+        // const hasPersonalMessage = hashPersonalMessage(message)
+        // const signedText = await web3.eth.sign(hasPersonalMessage, address);
+        // const hash = utils.keccak256(signedText);
+        // console.log(hash)
+        // const array = hash
+        //     // @ts-ignore
+        //     .replace('0x', '')
+        //     // @ts-ignore
+        //     .match(/.{2}/g)
+        //     .map((hexNoPrefix) => BigNumber.from('0x' + hexNoPrefix).toNumber())
+        //
+        // if (array.length !== 32) {
+        //     throw new Error('Hash of signature is not the correct size! Something went wrong!');
+        // }
+        // const identity = PrivateKey.fromRawEd25519Seed(Uint8Array.from(array))
+        // localStorage.setItem('seed', JSON.stringify(array));
+        // // @ts-ignore
+        // localStorage.setItem("identity", identity.toString())
+
+        window.open(APP, "_blank")
     }
 
     const title = `IStorage`;
     const description =
         "Build Decentralized Storage Aggregation Layer to establish a Data Metaverse";
     const url = "https://www.anipfs.space";
+
+    const switchNetworkMumbai = async (web3) => {
+        try {
+            await web3.currentProvider.request({
+                method: "wallet_switchEthereumChain",
+                params: [{ chainId: "0x13881" }],
+            });
+        } catch (error) {
+            if (error.code === 4902) {
+                try {
+                    await web3.currentProvider.request({
+                        method: "wallet_addEthereumChain",
+                        params: [
+                            {
+                                chainId: "0x13881",
+                                chainName: "Mumbai",
+                                rpcUrls: ["https://rpc-mumbai.matic.today"],
+                                nativeCurrency: {
+                                    name: "Matic",
+                                    symbol: "Matic",
+                                    decimals: 18,
+                                },
+                                blockExplorerUrls: ["https://explorer-mumbai.maticvigil.com"],
+                            },
+                        ],
+                    });
+                } catch (error) {
+                    alert(error.message);
+                }
+            }
+        }
+    }
+
 
     return (
         <WebsitePrototypeWrapper title={title} description={description} url={url}>
@@ -425,7 +515,7 @@ function IndexPage() {
                                     }} className="nav-link" href="#contact">Contact</a>
                                 </div>
                             </div>
-                            {/*<div css={STYLE_signin} onClick={_signIn}>Launch App</div>*/}
+                            <div css={STYLE_signin} onClick={_signIn}>Launch App</div>
                         </nav>
 
                     </div>
